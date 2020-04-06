@@ -2,3 +2,7 @@ form label{
     text-align: left !important;
 }
 
+.calendar{
+    background: none !important;
+    color: white;
+}

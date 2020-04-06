@@ -17,10 +17,8 @@ class RegisterBox extends React.Component {
             axios.post("api/user/register", this.state)
                 .then(data => {
                     if (!data.data) {
-                        console.log("failed")
                             alert("Registration failed, some fields empty or incorrect!")
                     } else {
-                        console.log("success")
                         localStorage.setItem("currentUserID",data.data.id)
                         alert("Registration successful.")
                         this.props.history.push("/reservation")

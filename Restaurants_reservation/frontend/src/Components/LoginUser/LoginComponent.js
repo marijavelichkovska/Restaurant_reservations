@@ -56,11 +56,8 @@ class LoginBox extends React.Component {
             axios.post("api/user/login", this.state)
                 .then(data => {
                     if (!data.data) {
-                        console.log("failed");
                         alert("Username or password incorrect.")
-                        console.log(this.state)
                     } else {
-                        console.log("success");
                         localStorage.setItem('currentUserID', data.data.id)
                         this.props.history.push("/reservation")
                     }

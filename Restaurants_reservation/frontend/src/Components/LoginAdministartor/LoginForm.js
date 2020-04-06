@@ -56,11 +56,9 @@ class LoginForm extends React.Component {
             AdministratorRepository.loginAdministrator(this.state)
                 .then(data => {
                     if (!data.data) {
-                        console.log("failed");
+
                         alert("Email or password incorrect.")
-                        console.log(this.state)
                     } else {
-                        console.log("success");
                         localStorage.setItem('currentAdminID', data.data.id)
                         this.props.history.push("/administration")
                     }

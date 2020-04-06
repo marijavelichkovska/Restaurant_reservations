@@ -6,6 +6,9 @@ import FoodRepository from "../../Repository/FoodRepository";
 import './Reservasion.css'
 import Testimony from "../Shared/Testimony";
 import Footer from "../Shared/Footer";
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 
 class Reservation extends React.Component {
 
@@ -32,7 +35,7 @@ class Reservation extends React.Component {
         super(props);
 
         this.state = {
-            day: "",
+
             time: "",
             numberPeople: "",
             user:"",
@@ -41,7 +44,9 @@ class Reservation extends React.Component {
             reservedFood:[],
             fields: {},
             errors: {},
-            errorInNumberOfPeople: false
+            errorInNumberOfPeople: false,
+            day: new Date(),
+
 
         };
         this.onLogout = this.onLogout.bind(this)
@@ -98,11 +103,9 @@ class Reservation extends React.Component {
                     reservedFood: reservedFood
                 }
             )
-            console.log(this.state.reservedFood)
 
             axios.post("api/reservation/create", this.state)
                 .then(data => {
-                        console.log(data)
                         if (data.data == "CREATED") {
                             this.props.history.push("/success")
                         }
@@ -148,6 +151,11 @@ class Reservation extends React.Component {
             formIsValid = false;
             errors["day"] = "You must enter the date.";
         }
+        else if(fields["day"]<Date.now())
+        {
+            formIsValid = false;
+            errors["day"] = "Cannot choose past dates.";
+        }
         else{
             errors["day"]="";
         }
@@ -179,6 +187,18 @@ class Reservation extends React.Component {
         return formIsValid && !this.state.errorInNumberOfPeople;
 
     }
+    onChange = day => {
+
+
+        this.setState({day : new Date(day)})
+        let fields = this.state.fields;
+        fields['day'] = day;
+        this.setState({fields});
+
+    }
+
+
+
 
     render() {
         const {day,time,numberPeople} = this.state;
@@ -201,7 +221,10 @@ class Reservation extends React.Component {
                                         <div className="row form-group">
                                             <div className="col-md-12">
                                                 <label htmlFor="day">Enter the day:</label>
-                                                <input type="text" className="form-control" name="day" ref="day"  onChange={this.changeValue.bind(this, "day")}   placeholder="e.g. 12.01.2020" id="day" />
+                                                <Calendar formatMonth className="calendar"
+                                                    onChange={this.onChange}
+                                                    value={this.state.date}
+                                                />                                                {/*<input type="text" className="form-control" name="day" ref="day"  onChange={this.changeValue.bind(this, "day")}   placeholder="e.g. 12.01.2020" id="day" />*/}
                                                 <span className="errorMessage"  style={{color: "red"}}>{this.state.errors["day"]}</span>
 
                                             </div>
@@ -251,13 +274,15 @@ class Reservation extends React.Component {
                                             </div>
                                         </div>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>
                     </div></div></div>
             <Testimony/>
             <Footer/>
-        </div>
+            </div>
 
     );
     }

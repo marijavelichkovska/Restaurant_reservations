@@ -26,7 +26,6 @@ class Administrator extends Component {
             clicked: click
 
         });
-        console.log(this.state.clicks);
         });
     }
 
@@ -34,12 +33,11 @@ class Administrator extends Component {
     renderTableData() {
 
         return this.state.reservations.map((reservation, index) => {
-
-
             return (
                 <tr key={reservation.idRes}>
                     <td>{index+1}</td>
                     <td>{reservation.day}</td>
+
                     <td>{reservation.time}</td>
                     <td style={{textAlign : 'center'}}>{reservation.numberPeople}</td>
                     <td>{this.foodIsReserved(reservation.reservedFood) ? this.listReservedFood(reservation.reservedFood) : "food not reserved"}</td>
@@ -79,7 +77,6 @@ class Administrator extends Component {
                 reservations: data.data
 
             })
-            console.log(this.state.reservations);
         })
     }
     onLogout(){
@@ -115,8 +112,10 @@ class Administrator extends Component {
 
                                             </tr>
                                             </thead>
+
                                             <tbody>
-                                            {this.renderTableData()}
+
+                                            {this.state.reservations.length>0 ?  this.renderTableData() : <span style={{marginTop:"50px"}}>There are no reservations, yet.</span>}
                                             </tbody>
                                         </table>
                                     </div>

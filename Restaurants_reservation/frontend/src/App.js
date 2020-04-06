@@ -15,8 +15,6 @@ import Administrator from "./Components/Administrator/Administrator";
 import Reservation from "./Components/Reservation/Reservation";
 import SuccessReservation from "./Components/Reservation/SuccessReservation";
 import UserRepository from "./Repository/UserRepository";
-import AdministratorRepository from "./Repository/AdministratorRepository";
-import {User} from "./model/user";
 import LoginAdministrator from "./Components/LoginAdministartor/LoginAdministrator";
 
 

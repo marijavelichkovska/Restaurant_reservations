@@ -2,7 +2,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl> a foaf:PersonalProfileDocument ;
+<https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/foaf.ttl> a foaf:PersonalProfileDocument ;
     admin:errorReportsTo <mailto:leigh@ldodds.com> ;
     admin:generatorAgent <http://www.ldodds.com/foaf/foaf-a-matic> ;
     foaf:maker <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> ;

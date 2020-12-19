@@ -1,1 +1,24 @@
+@prefix admin: <http://webns.net/mvcb/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+<https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl> a foaf:PersonalProfileDocument ;
+    admin:errorReportsTo <mailto:leigh@ldodds.com> ;
+    admin:generatorAgent <http://www.ldodds.com/foaf/foaf-a-matic> ;
+    foaf:maker <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> ;
+    foaf:primaryTopic <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> .
+
+<https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> a foaf:Person ;
+    foaf:family_name "Velickovska" ;
+    foaf:givenname "Marija" ;
+    foaf:knows [ a foaf:Person ;
+            rdfs:seeAlso <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/raw.githubusercontent.com/angela-kralevska/COVID19_MK_project/master/foaf.ttl> ;
+            foaf:mbox_sha1sum "c387bbc0052069d4e710f5a5b26e7c5958a2f790" ;
+            foaf:name "Angela" ] ;
+    foaf:mbox_sha1sum "d43bbe1f64a6be36d5623efcba55d7dcdc6ca48a" ;
+    foaf:name "Marija Velickovska" ;
+    foaf:nick "mary" ;
+    foaf:phone <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/tel:123123123> ;
+    foaf:schoolHomepage <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/FINKI> ;
+    foaf:title "Mrs" ;
+    foaf:workplaceHomepage <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/mca.mk> .

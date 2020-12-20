@@ -5,20 +5,24 @@
 <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/foaf.ttl> a foaf:PersonalProfileDocument ;
     admin:errorReportsTo <mailto:leigh@ldodds.com> ;
     admin:generatorAgent <http://www.ldodds.com/foaf/foaf-a-matic> ;
-    foaf:maker <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> ;
-    foaf:primaryTopic <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> .
+    foaf:maker <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/foaf.ttl#me> ;
+    foaf:primaryTopic <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/foaf.ttl#me> .
 
-<https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/foaf.ttl#me> a foaf:Person ;
+<https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/foaf.ttl#me> a foaf:Person ;
     foaf:family_name "Velickovska" ;
     foaf:givenname "Marija" ;
     foaf:knows [ a foaf:Person ;
-            rdfs:seeAlso <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/raw.githubusercontent.com/angela-kralevska/COVID19_MK_project/master/foaf.ttl> ;
-            foaf:mbox_sha1sum "c387bbc0052069d4e710f5a5b26e7c5958a2f790" ;
-            foaf:name "Angela" ] ;
-    foaf:mbox_sha1sum "d43bbe1f64a6be36d5623efcba55d7dcdc6ca48a" ;
+            rdfs:seeAlso <https://raw.githubusercontent.com/risto-trajanov/Foaf/main/foaf.ttl> ;
+            foaf:mbox_sha1sum "a3306cdc40fe7f81fb5e3e471005ec0b10c52f85" ;
+            foaf:name "Risto Trajanov" ],
+        [ a foaf:Person ;
+            rdfs:seeAlso <https://raw.githubusercontent.com/WoodyMKD/WBS/main/foaf.ttl> ;
+            foaf:mbox_sha1sum "c7ad29e5836a12fe07acd39172b8eba87a3388e7" ;
+            foaf:name "Stefan Todorovski" ] ;
+    foaf:mbox_sha1sum "6e1b282164735f40099e6da2f9cd3f1e71e7de6b" ;
     foaf:name "Marija Velickovska" ;
-    foaf:nick "mary" ;
-    foaf:phone <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/tel:123123123> ;
-    foaf:schoolHomepage <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/FINKI> ;
+    foaf:nick "Mary" ;
+    foaf:phone <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/tel:070100100> ;
+    foaf:schoolHomepage <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/finki.ukim.mk> ;
     foaf:title "Mrs" ;
-    foaf:workplaceHomepage <https://github.com/marijavelichkovska/Restaurant_reservations/edit/master/mca.mk> .
+    foaf:workplaceHomepage <https://raw.githubusercontent.com/marijavelichkovska/Restaurant_reservations/master/mca.mk> .
